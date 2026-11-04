@@ -85,6 +85,9 @@
   #auth .primary { padding: 12px 18px; }
   #auth input { width: 100%; }
   #toggleMode { justify-self: center; font-size: 14px; }
+  #codeInfo { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+  #code { letter-spacing: 0.2em; }
+  .codeLinks { display: flex; justify-content: space-between; font-size: 14px; }
 
   /* Görevler */
   #addForm { display: flex; gap: 8px; margin-bottom: 16px; }
@@ -165,6 +168,16 @@
       <button id="authSubmit" class="primary" type="submit">Giriş yap</button>
       <button id="toggleMode" class="link" type="button">Hesabın yok mu? Hesap oluştur</button>
     </form>
+
+    <form id="codeForm" autocomplete="off" hidden>
+      <p id="codeInfo"></p>
+      <input id="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="Onay kodu" aria-label="Onay kodu" required>
+      <button id="codeSubmit" class="primary" type="submit">Onayla</button>
+      <div class="codeLinks">
+        <button id="codeBack" class="link" type="button">Geri dön</button>
+        <button id="codeResend" class="link" type="button">Kodu tekrar gönder</button>
+      </div>
+    </form>
   </section>
 
   <section id="app" hidden>
@@ -213,6 +226,7 @@
   let items = [];
   let loading = false;
   let signingUp = false;
+  let pendingEmail = null;   // Onay kodu beklenen e-posta
   let dragId = null;
   let filter = storageGet(FILTER_KEY) || 'all';
   if (!['all', 'active', 'done'].includes(filter)) filter = 'all';
@@ -237,7 +251,7 @@
   function explain(error) {
     const msg = (error && error.message) || '';
     if (/invalid login credentials/i.test(msg)) return 'E-posta veya şifre hatalı.';
-    if (/email not confirmed/i.test(msg)) return 'E-posta adresin henüz doğrulanmadı. Gelen kutundaki bağlantıya tıkla.';
+    if (error && error.code === 'otp_expired' || /token has expired|otp.*(invalid|expired)/i.test(msg)) return 'Kod hatalı veya süresi dolmuş.';
     if (/rate limit|too many/i.test(msg)) return 'Çok fazla deneme yapıldı. Biraz bekleyip tekrar dene.';
     if (/password/i.test(msg)) return 'Şifre yeterince güçlü değil. Daha uzun bir şifre dene.';
     if (/failed to fetch|network/i.test(msg)) return 'Sunucuya ulaşılamadı. İnternet bağlantını kontrol et.';
@@ -302,6 +316,13 @@
     $('app').hidden = true;
     $('auth').hidden = false;
     $('count').textContent = '';
+    $('authForm').hidden = !!pendingEmail;
+    $('codeForm').hidden = !pendingEmail;
+    if (pendingEmail) {
+      $('codeInfo').textContent = pendingEmail + ' adresine gönderilen onay kodunu yaz.';
+      $('code').value = '';
+      $('code').focus();
+    }
     $('authSubmit').textContent = signingUp ? 'Hesap oluştur' : 'Giriş yap';
     $('toggleMode').textContent = signingUp ? 'Hesabın var mı? Giriş yap' : 'Hesabın yok mu? Hesap oluştur';
     $('password').autocomplete = signingUp ? 'new-password' : 'current-password';
@@ -441,16 +462,63 @@
 
     button.disabled = false;
     if (error) {
+      // Kaydı yarım kalmış biri giriş yapmaya çalışırsa kod adımına geçer.
+      if (error.code === 'email_not_confirmed' || /email not confirmed/i.test(error.message)) {
+        pendingEmail = email;
+        $('password').value = '';
+        showAuth();
+        notify('E-postan henüz onaylanmadı. Kodun yoksa tekrar gönderebilirsin.', 'info');
+        return;
+      }
       notify(explain(error));
       return;
     }
     $('password').value = '';
     if (signingUp && !data.session) {
+      // Kayıtlı bir adres için Supabase hata vermez, kod da göndermez.
+      if (data.user && data.user.identities && data.user.identities.length === 0) {
+        signingUp = false;
+        showAuth();
+        notify('Bu e-posta zaten kayıtlı. Giriş yapabilirsin.', 'info');
+        return;
+      }
       signingUp = false;
+      pendingEmail = email;
       showAuth();
-      notify('E-postana doğrulama bağlantısı gönderildi. Bağlantıya tıkla, sonra buraya dönüp giriş yap. ' +
-             'Bağlantının açtığı sayfa hata gösterebilir, doğrulamayı etkilemez.', 'info');
     }
+  });
+
+  $('codeForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const button = $('codeSubmit');
+    button.disabled = true;
+    notify('');
+    const { error } = await sb.auth.verifyOtp({
+      email: pendingEmail,
+      token: $('code').value.trim(),
+      type: 'signup',
+    });
+    button.disabled = false;
+    if (error) {
+      notify(explain(error));
+      return;
+    }
+    pendingEmail = null;   // Oturum açılır, görevlere onAuthStateChange geçirir.
+  });
+
+  $('codeResend').addEventListener('click', async () => {
+    const button = $('codeResend');
+    button.disabled = true;
+    const { error } = await sb.auth.resend({ type: 'signup', email: pendingEmail });
+    button.disabled = false;
+    if (error) notify(explain(error));
+    else notify('Yeni kod gönderildi.', 'info');
+  });
+
+  $('codeBack').addEventListener('click', () => {
+    pendingEmail = null;
+    notify('');
+    showAuth();
   });
 
   $('toggleMode').addEventListener('click', () => {
