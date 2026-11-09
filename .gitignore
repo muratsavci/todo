@@ -2,3 +2,5 @@
 supabase/.temp/
 supabase/.branches/
 brevo.env
+brevo.env.txt
+*.env.txt

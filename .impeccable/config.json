@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-consumer.html"
+        ],
+        "createdAt": "2026-11-09T18:02:33.047Z",
+        "reason": "Claude: decision sketch of the warm-consumer catalog world, whose grammar specifies a warm tinted ground"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-11-09T18:02:33.748Z",
+        "reason": "Claude: canon card deliberately renders the category standard"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-09T18:35:17.002Z",
+        "reason": "Claude: unchosen decision-round sketch that intentionally renders another direction's type; not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-consumer.html"
+        ],
+        "createdAt": "2026-11-09T18:35:17.943Z",
+        "reason": "Claude: unchosen decision-round sketch that intentionally renders another direction's type; not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-ticket.html"
+        ],
+        "createdAt": "2026-11-09T18:35:18.817Z",
+        "reason": "Claude: unchosen decision-round sketch that intentionally renders another direction's type; not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-11-09T18:35:19.752Z",
+        "reason": "Claude: unchosen decision-round sketch that intentionally renders another direction's type; not shipped UI"
+      }
+    ]
+  }
+}

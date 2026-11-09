@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T00:00:00Z",
+  "title": "Design System: Yapılacaklar",
+  "extensions": {
+    "colorMeta": {
+      "board-green": { "role": "neutral", "displayName": "Board Green", "canonical": "oklch(42.1% 0.080 168.1)", "cssVar": "--board", "tonalRamp": ["#001207", "#002f1f", "#014f3a", "#306f59", "#5b8f7b", "#84b19e", "#aed3c4", "#e1f3ec"] },
+      "board-ink": { "role": "neutral", "displayName": "Board Ink", "canonical": "oklch(100% 0 0)", "cssVar": "--board-ink", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "board-soft": { "role": "neutral", "displayName": "Board Soft", "canonical": "oklch(89.7% 0.022 171.7)", "cssVar": "--board-soft", "tonalRamp": ["#070d0b", "#1f2724", "#3a4541", "#586460", "#788681", "#99a9a3", "#bccec7", "#e6f1ed"] },
+      "leaf-white": { "role": "neutral", "displayName": "Leaf White", "canonical": "oklch(100% 0 0)", "cssVar": "--paper", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "calendar-ink": { "role": "neutral", "displayName": "Calendar Ink", "canonical": "oklch(19.1% 0 0)", "cssVar": "--ink", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "pencil-grey": { "role": "neutral", "displayName": "Pencil Grey", "canonical": "oklch(47.5% 0 0)", "cssVar": "--muted", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "oklch(88.8% 0 0)", "cssVar": "--hair", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "calendar-red": { "role": "primary", "displayName": "Calendar Red", "canonical": "oklch(55.9% 0.211 28.9)", "cssVar": "--red", "tonalRamp": ["#2d0000", "#580000", "#860000", "#b70d0a", "#e13f32", "#ff7362", "#ffa190", "#ffddd2"] },
+      "action-red": { "role": "primary", "displayName": "Action Red", "canonical": "oklch(55.9% 0.211 28.9)", "cssVar": "--act", "note": "Fixed in both themes; darkened from the sketch's #e0261b so white bold 18px text meets 4.5:1.", "tonalRamp": ["#2d0000", "#580000", "#860000", "#b70d0a", "#e13f32", "#ff7362", "#ffa190", "#ffddd2"] },
+      "action-red-deep": { "role": "primary", "displayName": "Action Red Deep", "canonical": "oklch(48.8% 0.185 29.0)", "cssVar": "--act-hover", "tonalRamp": ["#2b0000", "#560000", "#830000", "#b21d16", "#d05547", "#ed8273", "#ffaea0", "#ffe2db"] },
+      "month-band": { "role": "primary", "displayName": "Month Band Red", "canonical": "oklch(55.9% 0.211 28.9)", "cssVar": "--band", "tonalRamp": ["#2d0000", "#580000", "#860000", "#b70d0a", "#e13f32", "#ff7362", "#ffa190", "#ffddd2"] },
+      "binder-clip": { "role": "neutral", "displayName": "Binder Clip", "canonical": "oklch(23.1% 0 0)", "cssVar": "--clip", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "board-green-night": { "role": "neutral", "displayName": "Night Board", "canonical": "oklch(25.0% 0.041 171.0)", "cssVar": "--board (dark)", "tonalRamp": ["#001009", "#0c2b22", "#2d493f", "#4e685f", "#718880", "#96aba3", "#bccec7", "#e8f1ed"] },
+      "board-soft-night": { "role": "neutral", "displayName": "Night Board Soft", "cssVar": "--board-soft (dark)", "tonalRamp": ["#070d0b", "#1f2724", "#3a4541", "#586460", "#788681", "#99a9a3", "#bccec7", "#e6f1ed"] },
+      "leaf-night": { "role": "neutral", "displayName": "Night Leaf", "canonical": "oklch(22.4% 0.004 164.7)", "cssVar": "--paper (dark)", "tonalRamp": ["#0a0c0b", "#232625", "#404341", "#5f6261", "#808382", "#a3a6a4", "#c7cac8", "#edefee"] },
+      "calendar-ink-night": { "role": "neutral", "displayName": "Night Ink", "cssVar": "--ink (dark)", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] },
+      "pencil-grey-night": { "role": "neutral", "displayName": "Night Pencil Grey", "cssVar": "--muted (dark)", "tonalRamp": ["#0a0c0b", "#232625", "#404341", "#5f6261", "#808382", "#a3a6a4", "#c7cac8", "#edefee"] },
+      "hairline-night": { "role": "neutral", "displayName": "Night Hairline", "cssVar": "--hair (dark)", "tonalRamp": ["#0a0c0b", "#232625", "#404341", "#5f6261", "#808382", "#a3a6a4", "#c7cac8", "#edefee"] },
+      "calendar-red-night": { "role": "primary", "displayName": "Night Calendar Red", "canonical": "oklch(70.8% 0.184 27.3)", "cssVar": "--red (dark)", "note": "Text color only; never under white text.", "tonalRamp": ["#280000", "#4f0000", "#791815", "#a6342d", "#d45047", "#ff6f63", "#ff9b8d", "#ffd9cf"] },
+      "month-band-night": { "role": "primary", "displayName": "Night Month Band", "canonical": "oklch(52.0% 0.196 29.0)", "cssVar": "--band (dark)", "tonalRamp": ["#2b0000", "#560000", "#840000", "#b41711", "#d74d3f", "#f57c6d", "#ffa99a", "#ffe0d8"] },
+      "binder-clip-night": { "role": "neutral", "displayName": "Night Binder Clip", "cssVar": "--clip (dark)", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Day Numeral", "purpose": "Today's date numeral only; 104px on phones." },
+      "headline": { "displayName": "Weekday", "purpose": "Weekday under the numeral; 26px on phones." },
+      "month": { "displayName": "Month Band", "purpose": "Month and year in the red band; 24px on phones." },
+      "count": { "displayName": "Count", "purpose": "kaldı / bitti / yılın günü figures; 30px on phones." },
+      "title": { "displayName": "Sheet Heading", "purpose": "Uppercase sheet heading; 24px on phones." },
+      "brand": { "displayName": "Wordmark", "purpose": "Uppercase brand in the green bar." },
+      "task": { "displayName": "Task", "purpose": "Task row text; 18px on phones." },
+      "body": { "displayName": "Body", "purpose": "Base text and notices." },
+      "button": { "displayName": "Button", "purpose": "Primary button labels." },
+      "label": { "displayName": "Label", "purpose": "Count labels, filter tabs, hint line, links (15-16px)." }
+    },
+    "shadows": [
+      { "name": "hanging-leaf", "value": "0 18px 40px -18px rgba(0, 0, 0, 0.55)", "purpose": "The calendar leaf against the board. The only depth shadow in the system." },
+      { "name": "filter-underline", "value": "inset 0 -4px var(--red)", "purpose": "Active filter tab underline; a rule, not depth." },
+      { "name": "input-focus-ring", "value": "inset 0 0 0 1px var(--red)", "purpose": "Thickens the red border of a focused input." }
+    ],
+    "motion": [
+      { "name": "tear", "value": "520ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Bitenleri kopar: done rows lift (translateY -22px, rotate -4deg, origin top-left) and fade with a 2px dashed ink bottom edge; height held to 55%, then collapses to 0. Instant under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "760px", "purpose": "max-width: day column collapses into a band above the sheet." },
+      { "name": "narrow", "value": "380px", "purpose": "max-width: the yılın günü count is hidden." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square action-red block with white bold text; fixed red in both themes.",
+      "html": "<button class=\"ds-btn-primary\">Ekle</button>",
+      "css": ".ds-btn-primary { padding: 0 28px; min-height: 52px; font: 700 18px 'Barlow', 'Segoe UI', system-ui, sans-serif; color: #fff; background: var(--act, #d4221a); border: 0; border-radius: 0; cursor: pointer; } .ds-btn-primary:hover { background: var(--act-hover, #b11a13); } .ds-btn-primary:focus-visible { outline: 2px solid var(--red, #d4221a); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.55; cursor: default; }"
+    },
+    {
+      "name": "Bar Button",
+      "kind": "button",
+      "refersTo": "button-bar",
+      "description": "Outlined button on the green board (Çıkış yap); inverts on hover.",
+      "html": "<div class=\"ds-board\"><button class=\"ds-btn-bar\">Çıkış yap</button></div>",
+      "css": ".ds-board { background: var(--board, #0f5b45); padding: 16px; } .ds-btn-bar { font: 400 15px 'Barlow', 'Segoe UI', system-ui, sans-serif; color: var(--board-ink, #fff); background: none; border: 1.5px solid var(--board-soft, #cfe2db); border-radius: 0; padding: 6px 14px; cursor: pointer; } .ds-btn-bar:hover { background: var(--board-ink, #fff); color: var(--board, #0f5b45); } .ds-btn-bar:focus-visible { outline: 2px solid var(--board-ink, #fff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Square field with a 2px ink border; turns calendar red on focus.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Yeni görev ekle…\">",
+      "css": ".ds-input { width: 100%; padding: 14px 16px; font: 18px/1.3 'Barlow', 'Segoe UI', system-ui, sans-serif; color: var(--ink, #141414); background: var(--paper, #fff); border: 2px solid var(--ink, #141414); border-radius: 0; } .ds-input::placeholder { color: var(--muted, #5c5c5c); } .ds-input:focus { outline: none; border-color: var(--red, #d4221a); box-shadow: inset 0 0 0 1px var(--red, #d4221a); }"
+    },
+    {
+      "name": "Filter Tabs",
+      "kind": "nav",
+      "refersTo": "filter-tab",
+      "description": "Text tabs with tabular counts on a 2px ink baseline; active tab gets a 4px red underline.",
+      "html": "<div class=\"ds-filters\"><button class=\"ds-filter\" aria-pressed=\"true\">Tümü<span>5</span></button><button class=\"ds-filter\" aria-pressed=\"false\">Aktif<span>3</span></button><button class=\"ds-filter\" aria-pressed=\"false\">Bitenler<span>2</span></button></div>",
+      "css": ".ds-filters { display: flex; gap: 28px; border-bottom: 2px solid var(--ink, #141414); background: var(--paper, #fff); } .ds-filter { padding: 0 0 10px; color: var(--muted, #5c5c5c); background: none; border: 0; font: 400 16px 'Barlow', 'Segoe UI', system-ui, sans-serif; cursor: pointer; } .ds-filter span { font-variant-numeric: tabular-nums; margin-left: 4px; } .ds-filter:hover { color: var(--ink, #141414); } .ds-filter:focus-visible { outline: 2px solid var(--red, #d4221a); outline-offset: 2px; } .ds-filter[aria-pressed=\"true\"] { color: var(--ink, #141414); font-weight: 700; box-shadow: inset 0 -4px var(--red, #d4221a); }"
+    },
+    {
+      "name": "Task Row",
+      "kind": "custom",
+      "refersTo": "task-row",
+      "description": "Square checkbox, 20px task text, hairline divider, delete cross on hover; done rows strike through in pencil grey.",
+      "html": "<ul class=\"ds-list\"><li class=\"ds-row\"><input class=\"ds-check\" type=\"checkbox\"><span class=\"ds-text\">Faturayı öde</span><button class=\"ds-del\" aria-label=\"Sil\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6L6 18\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" fill=\"none\"/></svg></button></li><li class=\"ds-row ds-done\"><input class=\"ds-check\" type=\"checkbox\" checked><span class=\"ds-text\">Süt ve ekmek al</span><button class=\"ds-del\" aria-label=\"Sil\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6L6 18\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" fill=\"none\"/></svg></button></li></ul>",
+      "css": ".ds-list { list-style: none; margin: 0; padding: 0 16px; background: var(--paper, #fff); } .ds-row { display: flex; align-items: center; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--hair, #dadada); font: 400 20px/1.45 'Barlow', 'Segoe UI', system-ui, sans-serif; color: var(--ink, #141414); } .ds-check { appearance: none; flex: none; margin: 0; width: 24px; height: 24px; border: 2px solid var(--ink, #141414); background: var(--paper, #fff); border-radius: 0; cursor: pointer; } .ds-check:checked { background: var(--ink, #141414) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E\") center / 18px no-repeat; } .ds-check:focus-visible { outline: 2px solid var(--red, #d4221a); outline-offset: 2px; } .ds-text { flex: 1; } .ds-done .ds-text { color: var(--muted, #5c5c5c); text-decoration: line-through; text-decoration-thickness: 2px; } .ds-del { flex: none; width: 36px; height: 36px; padding: 0; display: grid; place-items: center; color: var(--muted, #5c5c5c); background: none; border: 0; opacity: 0; cursor: pointer; } .ds-del svg { width: 18px; height: 18px; } .ds-row:hover .ds-del, .ds-del:focus-visible { opacity: 1; } .ds-del:hover { color: var(--red, #d4221a); }"
+    },
+    {
+      "name": "Day Column",
+      "kind": "custom",
+      "refersTo": "month-band",
+      "description": "Signature: red month band, 300px condensed numeral, weekday, counts under a 2px ink rule. Sundays print red.",
+      "html": "<aside class=\"ds-day\"><p class=\"ds-month\">KASIM 2026</p><div class=\"ds-num\">9</div><div class=\"ds-wd\">PAZARTESİ</div><dl class=\"ds-meta\"><div><dd>3</dd><dt>kaldı</dt></div><div class=\"ds-red\"><dd>2</dd><dt>bitti</dt></div><div><dd>313</dd><dt>yılın günü</dt></div></dl></aside>",
+      "css": ".ds-day { width: 400px; display: flex; flex-direction: column; background: var(--paper, #fff); color: var(--ink, #141414); border-right: 2px solid var(--ink, #141414); padding-bottom: 28px; } .ds-month { margin: 0; background: var(--band, #d4221a); color: #fff; text-align: center; padding: 18px 0; font: 800 34px/1 'Barlow Condensed', 'Arial Narrow', sans-serif; letter-spacing: 0.1em; } .ds-num { font: 800 300px/0.9 'Barlow Condensed', 'Arial Narrow', sans-serif; text-align: center; margin-top: 30px; font-variant-numeric: lining-nums; } .ds-wd { text-align: center; font: 800 40px/1 'Barlow Condensed', 'Arial Narrow', sans-serif; letter-spacing: 0.12em; margin-top: 4px; } .ds-day.sunday .ds-num, .ds-day.sunday .ds-wd { color: var(--red, #d4221a); } .ds-meta { margin: 32px 32px 0; border-top: 2px solid var(--ink, #141414); padding-top: 16px; display: flex; justify-content: space-between; gap: 12px; font: 400 16px 'Barlow', 'Segoe UI', system-ui, sans-serif; } .ds-meta dd { margin: 0; font: 800 44px/1 'Barlow Condensed', 'Arial Narrow', sans-serif; font-variant-numeric: tabular-nums; } .ds-meta dt { color: var(--muted, #5c5c5c); } .ds-red dd { color: var(--red, #d4221a); }"
+    },
+    {
+      "name": "Tear Line",
+      "kind": "custom",
+      "refersTo": "tear-action",
+      "description": "Signature: dashed ink perforation at the sheet's foot with the hint and the red 'Bitenleri kopar' action.",
+      "html": "<footer class=\"ds-tear\"><span>Düzenlemek için çift tıkla, sıralamak için sürükle.</span><button class=\"ds-clear\">Bitenleri kopar</button></footer>",
+      "css": ".ds-tear { border-top: 2px dashed var(--ink, #141414); padding-top: 14px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font: 400 15px 'Barlow', 'Segoe UI', system-ui, sans-serif; color: var(--muted, #5c5c5c); background: var(--paper, #fff); } .ds-clear { color: var(--red, #d4221a); background: none; border: 0; padding: 6px 0; font: 700 16px 'Barlow', 'Segoe UI', system-ui, sans-serif; cursor: pointer; } .ds-clear:hover { text-decoration: underline; text-underline-offset: 4px; } .ds-clear:focus-visible { outline: 2px solid var(--red, #d4221a); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Yaprak Takvim (the tear-off wall calendar)",
+    "overview": "The list lives on today's leaf of a Turkish tear-off wall calendar pinned to a green board. The page is not a floating card on a neutral grey ground: it is a white leaf with a black binder clip at its top edge, a red month band, an enormous condensed day numeral, the weekday spelled out beneath it, and a running count of what is left. The right side of the leaf is the sheet where tasks are written, ticked, and finally torn off along a dashed perforation.\n\nThe material vocabulary is printed paper: hard 2px ink rules, square checkboxes, square buttons, one dashed tear line, and red used the way a calendar printer uses it (month band, Sundays, the \"done\" count, and actions). Density is calm and generous, sized for a tab that stays open all day; task text runs at 20px so the list reads at a glance. All UI copy is Turkish; the condensed display face carries uppercase Turkish diacritics (Ş, İ, Ğ) cleanly and must keep doing so.\n\nLight and dark follow the system. At night the board deepens, the leaf becomes charcoal, ink inverts to off-white, and the text red lightens; the month band and the action red stay deep so white type on them keeps its contrast.",
+    "keyCharacteristics": [
+      "Green board field, white leaf, calendar red, black ink: four materials, nothing else.",
+      "Barlow Condensed 800 for everything printed on the calendar (date, month, weekday, counts, headings); Barlow for everything written by the user or the UI.",
+      "Square everywhere; the binder clip is the only rounded object.",
+      "Ink rules (2px solid) structure the leaf; one dashed rule marks where finished work tears off.",
+      "Sundays print red, as on a real Turkish wall calendar."
+    ],
+    "rules": [
+      { "name": "The Printer's Red Rule", "body": "Red marks what a calendar printer would mark (the month, Sundays, the done count) and what the user can act on. It never fills a large area other than the month band and the primary button.", "section": "colors" },
+      { "name": "The Fixed Action Red Rule", "body": "Filled red surfaces carrying white text use `action-red` / `month-band` in both themes. Never put white text on `calendar-red-night`.", "section": "colors" },
+      { "name": "The Printed vs. Written Rule", "body": "If the calendar would print it (dates, month, weekday, counts, section headings), it is Barlow Condensed 800. If a person writes or operates it, it is Barlow.", "section": "typography" },
+      { "name": "The Tabular Count Rule", "body": "Every changing number (counts, filter tallies) uses tabular numerals so the figures never jitter as tasks change.", "section": "typography" },
+      { "name": "The One Leaf Rule", "body": "Only the leaf casts a shadow. Elements on the leaf are flat and separated by rules, hairlines, and the active filter's 4px red underline (an inset shadow used as a rule, not as depth).", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** set every printed calendar element (date, month, weekday, counts, headings) in Barlow Condensed 800, and keep counts tabular.",
+      "**Do** print Sunday's numeral and weekday in calendar red.",
+      "**Do** use `action-red` (hover `action-red-deep`) for any filled button with white text, in both themes.",
+      "**Do** structure the leaf with 2px solid ink rules and separate list rows with the 1px hairline.",
+      "**Do** reserve the dashed 2px ink rule for perforation: the tear line and rows being torn off.",
+      "**Do** collapse the day column into a band above the sheet at ≤760px.",
+      "**Do** keep reduced motion instant for the tear and any future motion.",
+      "**Do** write UI copy in Turkish, and check that condensed uppercase renders İ, Ş, Ğ correctly."
+    ],
+    "donts": [
+      "**Don't** round corners on buttons, inputs, checkboxes, or the leaf; the binder clip's 4px radius is the only curve.",
+      "**Don't** put white text on `calendar-red-night`; it is a text color only.",
+      "**Don't** add shadows to anything on the leaf; only the leaf hangs.",
+      "**Don't** float the list in a centred card on a neutral grey ground; it lives on the leaf on the green board.",
+      "**Don't** spread red beyond the month band and primary button as a fill."
+    ]
+  }
+}
